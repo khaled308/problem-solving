@@ -55,3 +55,26 @@ def capitalizeWords(str):
     str = str[0:-1] + str[-1].upper()
   
   return capitalizeWords(str[0:-1]) + str[-1] 
+
+# tree recursion
+
+def r(num):
+  if num < 1 :
+    return
+  
+
+  print(num)
+  r(num - 1)
+  r(num - 1)
+
+# indirect recursion
+def A(num):
+  if num > 0 :
+    print(num)
+    B(num - 1)
+
+def B(num):
+  if num > 0:
+    print(num)
+    A(num // 2)
+
