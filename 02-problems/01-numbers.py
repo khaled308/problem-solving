@@ -123,3 +123,31 @@ def allDivisors(num):
         i -= 1
 
     return divisors
+
+
+# binary to decimal
+def binaryToDecimal(num):
+    res = 0
+    base = 1
+
+    while (num > 0):
+        last_digit = num % 10
+        res += last_digit * base
+        base *= 2
+        num = int(num / 10)
+
+    return res
+
+
+# decimal to binary
+def decimalToBinary(num):
+    res = 0
+    base = 1
+
+    while (num > 0):
+        last_digit = num % 2
+        res += base * last_digit
+        base *= 10
+        num = int(num / 2)
+
+    return res
